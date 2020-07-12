@@ -1,3 +1,6 @@
+npm run dev // 启动本地
+npm run build // 打包线上环境
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
