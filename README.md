@@ -1,6 +1,66 @@
 npm run dev // 启动本地
 npm run build // 打包线上环境
 
+
+
+
+react Link传递参数三种方式
+1、通过url进行拼接 path='/detail/:id/:name' 接收参数 this.props.match.params.name  需要在路由表进行配置
+   优点：子页面刷新时因为url里带有参数，依然有这个值 
+   缺点：如果需要传递多个参数不方便
+
+2、通过query传递参数 <Link  to={{ pathname: '/detail/', query:{id: obj.id, name: obj.name, push_time: obj.push_time}}}>title</Link>
+   接收参数  this.props.location.query
+3、通过state传递参数 和query查不同的是  state传参是加密的 不再地址栏展示 query是公开的 在地址栏展示
+   2、3缺点：刷新页面 参数会丢失
+
+
+module.exports={fn}  导出   require引入 或者  import utils from './util' 或者 import {storage } from './../../utils'
+
+export 单个导出   不能直接将exports变量指向一个值 因为这样等于切断了 exports与module.expoets的联系
+
+export const appid = appid
+export function getAppid() {
+  return '123456'
+}
+
+导入  import { appid,getAppid } from './util'   
+导入  import * as utils from './util'
+导入  let utils = require("./../../utils")
+
+
+export default 为模块指定默认输出  ------只能用一次------
+const app = function(){}
+export default app
+
+导入  import utils from './../../utils'
+导入 let utils = require("./../../utils")    utils.default.set("ke11y",886)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
