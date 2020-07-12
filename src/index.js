@@ -31,4 +31,3 @@ ReactDOM.render(
 
 
 serviceWorker.unregister();
-// return userInfo ? <item.component {...props} /> : <Redirect to='/login'from='/'/>

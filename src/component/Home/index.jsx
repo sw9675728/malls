@@ -9,6 +9,7 @@ class Home extends Component {
   render() {
     return (
         <header>
+          <Link to='user'>user</Link>
             <div className='title'>首页头部标题</div>
             {/* <Styleds/> */}
         </header>
